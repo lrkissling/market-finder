@@ -1,0 +1,16 @@
+Assumptions:
+  - That "nearby" markets are markets that are in the same zip code.
+  - That the user wants the full details of a market's schedule, since most
+    markets in the API do not have up-to-date schedules.
+  - The details from the weather forecast the user wants.
+  - That the user wants the forecast on a per-zip code basis, showing the next
+    three days' weather since market schedule data is too unreliable.
+  - That the client wanted minimal styling of the web page.
+
+My choice of HTML, Javascript and jQuery was only moderately well suited for this
+task. The simplicity of the USDA API in combination with the asynchronous nature
+of AJAX calls made the retrieval and proper formatting of all market details
+on initial submission of a zip code too cumbersome to implement.
+
+That is why I chose to prompt the user to click a Details button to view details
+on a market, using native jQuery UI for simplicity's sake.
