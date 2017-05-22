@@ -13,9 +13,10 @@ $(document).ready(function() {
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
-        url: "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + this.id,
-        dataType: 'jsonp',
-        jsonpCallback: 'marketDetailHandler'
+        url: "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail",
+        data: { id: this.id },
+        dataType: "jsonp",
+        jsonpCallback: "marketDetailHandler"
     });
   });
 });
@@ -60,7 +61,8 @@ function findNearbyMarkets(zip) {
   $.ajax({
       type: "GET",
       contentType: "application/json; charset=utf-8",
-      url: "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" + zip,
+      url: "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch",
+      data:{ zip: zip },
       dataType: 'jsonp',
       jsonpCallback: 'marketResultsHandler'
   });
