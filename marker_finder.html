@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="market_finder.css"/>
+  </head>
+
+  <body>
+    <input type="text" id="zip_code" onkeypress="validateKeyPress" maxlength="5" placeholder="Enter 5 digit zip code."/>
+    <div>
+      <ul id="markets"></ul>
+    </div>
+    <div id="detail_dialog" title="Farmer's Market Details">
+      <ul id="details"></ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="market_finder.js"></script>
+  </body>
+
+</html>
